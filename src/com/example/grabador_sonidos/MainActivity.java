@@ -259,11 +259,9 @@ public class MainActivity extends Activity {
 			int delay = 8000;
             float attenuation = 0.5f;
             this.myEffect(delay, attenuation);*/
-            //this.myChorus();	
+            this.myChorus();	
 			//this.myPrueba8(); // Al revés
-			//this.myPrueba9();
-			this.myPrueba7();
-			//snd.play(fly);
+			//this.myPrueba9(); // efectos sonido
  		}
 		
 		public void helioClick(View v)
