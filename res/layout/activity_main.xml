@@ -1,0 +1,188 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <Button
+        android:id="@+id/button_bajar_pitch"
+        android:layout_width="80px"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button_subir_pitch"
+        android:layout_toRightOf="@+id/tv_estado"
+        android:onClick="bajaPitchClick"
+        android:text="@string/menos" />
+
+    <Button
+        android:id="@+id/button_grabar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="27dp"
+        android:onClick="RecordClick"
+        android:text="@string/grabar" />
+
+    <TextView
+        android:id="@+id/tv_estado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:text="@string/parado" />
+
+    <Button
+        android:id="@+id/button_subir_pitch"
+        android:layout_width="80px"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="15dp"
+        android:onClick="subePitchClick"
+        android:text="@string/mas" />
+
+    <TextView
+        android:id="@+id/tv_value_pitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button_subir_pitch"
+        android:layout_alignBottom="@+id/button_subir_pitch"
+        android:layout_toRightOf="@+id/button_grabar"
+        android:textSize="20sp"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/button_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_grabar"
+        android:layout_below="@+id/button_grabar"
+        android:layout_marginTop="14dp"
+        android:onClick="PlayClick"
+        android:text="@string/play" />
+
+    <Button
+        android:id="@+id/button_stop_recording"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button_grabar"
+        android:layout_alignBottom="@+id/button_grabar"
+        android:layout_alignLeft="@+id/tv_estado"
+        android:onClick="stopRecordingClick"
+        android:text="@string/parar" />
+
+    <Button
+        android:id="@+id/button_stop_playing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_stop_recording"
+        android:layout_alignTop="@+id/button_play"
+        android:onClick="stopPlayingClick"
+        android:text="@string/stop_playing" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_play"
+        android:layout_below="@+id/button_stop_playing"
+        android:layout_marginTop="32dp"
+        android:textSize="20sp"
+        android:text="@string/estado" />
+
+    <Button
+        android:id="@+id/button_metal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button_reverb"
+        android:layout_alignBottom="@+id/button_reverb"
+        android:layout_toRightOf="@+id/button_reverb"
+        android:onClick="metalClick"
+        android:text="@string/metal" />
+
+    <Button
+        android:id="@+id/button_echo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/button_subir_pitch"
+        android:layout_marginTop="14dp"
+        android:onClick="echoClick"
+        android:text="@string/eco" />
+
+    <Button
+        android:id="@+id/button_reverb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button_echo"
+        android:layout_alignBottom="@+id/button_echo"
+        android:layout_toRightOf="@+id/button_echo"
+        android:onClick="reverbClick"
+        android:text="@string/reverb" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="19dp"
+        android:layout_toLeftOf="@+id/button_reverb"
+        android:text="@string/pitch"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button_chorus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button_metal"
+        android:layout_alignBottom="@+id/button_metal"
+        android:layout_alignParentRight="true"
+        android:onClick="chorusClick"
+        android:text="@string/chorus" />
+
+    <Button
+        android:id="@+id/button_helio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_echo"
+        android:layout_below="@+id/button_echo"
+        android:onClick="helioClick"
+        android:text="@string/helio" />
+
+    <Button
+        android:id="@+id/button_pitufo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button_helio"
+        android:layout_alignBottom="@+id/button_helio"
+        android:layout_toRightOf="@+id/button_play"
+        android:onClick="pitufoClick"
+        android:text="@string/pitufo" />
+
+    <Button
+        android:id="@+id/button_malvado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button_pitufo"
+        android:layout_alignBottom="@+id/button_pitufo"
+        android:layout_alignRight="@+id/button_metal"
+        android:onClick="malvadoClick"
+        android:text="@string/malvado" />
+
+    <Button
+        android:id="@+id/button_fantasma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/button_chorus"
+        android:layout_below="@+id/button_chorus"
+        android:onClick="fantasmaClick"
+        android:text="@string/fantasma" />
+
+</RelativeLayout>
